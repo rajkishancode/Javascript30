@@ -118,8 +118,17 @@ const sumUp = (array) => array.reduce((obj,item) =>{
   'walk':0,
   'van':0,
 })
-    console.log(sumUp(data))
+    // console.log(sumUp(data))
+    //short solution
+    const transportation = data.reduce((obj,item) =>{
+      if(!obj[item]){
+        obj[item] =0;
+      }
+      obj[item]++;
+      return obj;
+    },{})
 
+    console.log(transportation)
   </script>
 </body>
 </html>
